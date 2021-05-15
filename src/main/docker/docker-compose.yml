@@ -1,0 +1,10 @@
+woelkchen_download:
+  image: lumue/woelkchen_download:master-SNAPSHOT
+  restart: always
+
+  volumes:
+    - /data/docker-volumes/woelkchen_download/woelkchen_download:/woelkchen/download
+    - /mnt/nasbox/media/adult/incoming:/downloads
+  ports:
+    - "8001:8001"
+
